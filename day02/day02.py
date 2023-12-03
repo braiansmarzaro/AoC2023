@@ -6,7 +6,7 @@ games = {i+1: x.strip().split(': ')[1].split('; ') for i, x in enumerate(data)}
 
 
 class Colors:
-    def __init__(self, games) -> None:
+    def __init__(self, games:str) -> None:
         self.games = games.replace(',', '').split()
         self.red = self.get_color('red')
         self.green = self.get_color('green')
@@ -16,7 +16,7 @@ class Colors:
         """Get the color number by getting the index of the name of the color and going to the predecessor
 
         Args:
-            color (str): _description_
+            color (str): the chosen color. In this exercise it's (red,green,blue)
 
         Returns:
             int: the color count for that game
@@ -42,3 +42,36 @@ def is_possible(red=12, green=13, blue=14, game_dict=games):
 
 if __name__ == "__main__":
     print(is_possible())
+
+
+# Part 2
+class MinColor:
+
+    def __init__(self, game_list: list) -> None:
+        self.reds = []
+        self.greens = []
+        self.blues = []
+        for g in game_list:
+            color = Colors(g)
+            self.reds.append(color.red)
+            self.greens.append(color.green)
+            self.blues.append(color.blue)
+        
+        self.minimum_colors = (max(self.reds),max(self.greens),max(self.blues))
+
+    @property
+    def power(self):
+        p = 1
+        for c in self.minimum_colors:
+            p*=c
+        return p
+
+
+def minimum(games_dict = games):
+    total = 0
+    for g in games_dict.values():
+
+        color = MinColor(g)
+        total+= color.power
+    return total
+print(minimum())
