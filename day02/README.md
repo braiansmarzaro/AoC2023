@@ -26,3 +26,25 @@ O Elfo gostaria de saber primeiro quais jogos teriam sido **possíveis** se a bo
 No exemplo acima, os jogos 1, 2 e 5 teriam sido **possíveis** se a bolsa tivesse sido carregada com essa configuração. No entanto, o jogo 3 teria sido **impossível** porque em um momento o Elfo mostrou a você 20 cubos vermelhos de uma vez; da mesma forma, o jogo 4 também teria sido **impossível** porque o Elfo mostrou a você 15 cubos azuis de uma vez. Se somar os IDs dos jogos que teriam sido possíveis, você obtém **`8`**.
 
 Determine quais jogos teriam sido possíveis se a bolsa tivesse sido carregada com apenas 12 cubos vermelhos, 13 cubos verdes e 14 cubos azuis. **Qual é a soma dos IDs desses jogos?**
+
+--- Parte Dois ---
+O Elfo diz que pararam de produzir neve porque não estão recebendo água! Ele não tem certeza do motivo pelo qual a água parou; no entanto, ele pode te mostrar como chegar à fonte de água para verificar por si mesmo. É só ali na frente!
+
+Enquanto você continua a caminhada, o Elfo faz uma segunda pergunta: em cada jogo que você jogou, **qual é o menor número de cubos de cada cor** que poderia ter estado na bolsa para tornar o jogo possível?
+
+Considere novamente os exemplos de jogos anteriores:
+```
+Jogo 1: 3 azuis, 4 vermelhos; 1 vermelho, 2 verdes, 6 azuis; 2 verdes
+Jogo 2: 1 azul, 2 verdes; 3 verdes, 4 azuis, 1 vermelho; 1 verde, 1 azul
+Jogo 3: 8 verdes, 6 azuis, 20 vermelhos; 5 azuis, 4 vermelhos, 13 verdes; 5 verdes, 1 vermelho
+Jogo 4: 1 verde, 3 vermelhos, 6 azuis; 3 verdes, 6 vermelhos; 3 verdes, 15 azuis, 14 vermelhos
+Jogo 5: 6 vermelhos, 1 azul, 3 verdes; 2 azuis, 1 vermelho, 2 verdes
+```
+- No jogo 1, o jogo poderia ter sido jogado com no mínimo 4 cubos vermelhos, 2 verdes e 6 cubos azuis. Se qualquer cor tivesse pelo menos um cubo a menos, o jogo teria sido impossível.
+- O Jogo 2 poderia ter sido jogado com no mínimo 1 cubo vermelho, 3 verdes e 4 azuis.
+- O Jogo 3 deve ter sido jogado com pelo menos 20 cubos vermelhos, 13 verdes e 6 azuis.
+- O Jogo 4 exigiu no mínimo 14 cubos vermelhos, 3 verdes e 15 cubos azuis.
+- O Jogo 5 precisava de pelo menos 6 cubos vermelhos, 3 verdes e 2 azuis na bolsa.
+O poder de um conjunto de cubos é igual ao número de cubos vermelhos, verdes e azuis multiplicados juntos. O poder do conjunto mínimo de cubos no jogo 1 é 48. Nos jogos 2 a 5, foi `12`, `1560`, `630` e `36`, respectivamente. Somando esses cinco poderes, obtemos a soma **`2286`**.
+
+Para cada jogo, encontre o conjunto mínimo de cubos que deve ter estado presente. **Qual é a soma dos poderes desses conjuntos?**
