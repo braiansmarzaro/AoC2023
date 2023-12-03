@@ -21,3 +21,20 @@ treb7uchet
 Neste exemplo, os valores de calibração dessas quatro linhas são 12, 38, 15 e 77. Somando-os, obtemos 142.
 
 Considere todo o seu documento de calibração. Qual é a soma de todos os valores de calibração?
+
+--- Parte Dois ---
+Seu cálculo não está totalmente correto. Parece que alguns dos dígitos na verdade estão escritos com letras: um, dois, três, quatro, cinco, seis, sete, oito e nove também contam como "dígitos" válidos.
+
+Equipado com esta nova informação, agora você precisa encontrar o verdadeiro primeiro e último dígito em cada linha. Por exemplo:
+```
+two1nine
+eightwothree
+abcone2threexyz
+xtwone3four
+4nineeightseven2
+zoneight234
+7pqrstsixteen
+```
+Neste exemplo, os valores de calibração são 29, 83, 13, 24, 42, 14 e 76. Somando-os, obtemos 281.
+
+Qual é a soma de todos os valores de calibração?
