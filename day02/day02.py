@@ -1,3 +1,4 @@
+# 100% Done
 with open('input.txt') as f:  # Opens the file and get rid of '\n'
     data = f.readlines()
 
