@@ -33,3 +33,33 @@ O Cartão 6 não tem números vencedores, então não vale pontos.
 Assim, neste exemplo, o monte de cartões raspáveis do Elfo vale 13 pontos.
 
 Sente-se no grande monte de cartões coloridos. **Quantos pontos eles valem no total?**
+
+# Parte 2
+# --- Parte Dois ---
+Assim que você está prestes a relatar suas descobertas para o Elfo, um de vocês percebe que as regras na verdade foram impressas na parte de trás de cada carta o tempo todo.
+
+Não há tal coisa como "pontos". Em vez disso, os cartões de raspadinha só fazem você **ganhar mais cartões de raspadinha** iguais ao número de números vencedores que você tem.
+
+Especificamente, você ganha **cópias** dos cartões de raspadinha abaixo do cartão vencedor igual ao número de correspondências. Portanto, se o cartão 10 tiver 5 números correspondentes, você ganharia uma cópia de cada um dos cartões 11, 12, 13, 14 e 15.
+
+As cópias dos cartões de raspadinha são pontuadas como cartões de raspadinha normais e têm o **mesmo número de cartão** que o cartão que eles copiaram. Então, se você ganhar uma cópia do cartão 10 e ele tiver 5 números correspondentes, ele ganharia então uma cópia dos mesmos cartões que o cartão original 10 ganhou: cartões 11, 12, 13, 14 e 15. Esse processo se repete até que nenhuma das cópias faça você ganhar mais cartões. (Os cartões nunca farão você copiar um cartão além do final da mesa.)
+
+Desta vez, o exemplo acima ocorre de maneira diferente:
+```
+Card 1: 41 48 83 86 17 | 83 86  6 31 17  9 48 53
+Card 2: 13 32 20 16 61 | 61 30 68 82 17 32 24 19
+Card 3:  1 21 53 59 44 | 69 82 63 72 16 21 14  1
+Card 4: 41 92 73 84 69 | 59 84 76 51 58  5 54 83
+Card 5: 87 83 26 28 32 | 88 30 70 12 93 22 82 36
+Card 6: 31 18 13 56 72 | 74 77 10 23 35 67 36 11
+```
+- O Cartão 1 tem quatro números correspondentes, então você ganha uma cópia de cada um dos quatro próximos cartões: cartões 2, 3, 4 e 5.
+- Seu cartão original 2 tem dois números correspondentes, então você ganha uma cópia de cada um dos cartões 3 e 4.
+- Sua cópia do cartão 2 também ganha uma cópia de cada um dos cartões 3 e 4.
+- Suas quatro instâncias do cartão 3 (um original e três cópias) têm dois números correspondentes, então você ganha **quatro** cópias de cada um dos cartões 4 e 5.
+- Suas oito instâncias do cartão 4 (um original e sete cópias) têm um número correspondente, então você ganha **oito** cópias do cartão 5.
+- Suas quatorze instâncias do cartão 5 (um original e treze cópias) não têm números correspondentes e não ganham mais cartões.
+- Sua única instância do cartão 6 (um original) não tem números correspondentes e não ganha mais cartões.
+Depois que todos os originais e cópias foram processados, você acaba com `1` instância do cartão 1, `2` instâncias do cartão 2, `4` instâncias do cartão 3, `8` instâncias do cartão 4, `14` instâncias do cartão 5 e `1` instância do cartão 6. No total, esse exemplo de pilha de cartões de raspadinha faz com que você tenha, em última análise, 30 cartões de raspadinha!
+
+Processe todos os cartões de raspadinha originais e copiados até não ganhar mais cartões de raspadinha. **Incluindo o conjunto original de cartões de raspadinha, quantos cartões de raspadinha você acaba tendo?**
